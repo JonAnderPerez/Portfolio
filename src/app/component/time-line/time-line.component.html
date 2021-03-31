@@ -1,9 +1,9 @@
 <div class="bg-accent">
     <div class="container">
         <div class="d-flex flex-column">
-            <div class="d-flex flex-row justify-content-center">
-                <button class="btn btn-timeline btn-lg mr-5 mb-4 mt-4 active" type="button">Experiencia laboral</button>
-                <button class="btn btn-timeline btn-lg ml-5 mb-4 mt-4" type="button">Mis estudios</button>
+            <div class="d-flex flex-row justify-content-around">
+                <button class="btn btn-timeline btn-lg mb-4 mt-4 active" type="button">Experiencia laboral</button>
+                <button class="btn btn-timeline btn-lg mb-4 mt-4" type="button">Mis estudios</button>
             </div>
             <div class="main-timeline">
                 <div class="timeline" *ngFor="let exp of timeline">
@@ -12,8 +12,8 @@
                     <div class="timeline-date">
                         <div class="date-outer">
                             <span class="date">
-                                    <span class="month">{{exp.tiempo}}</span>
-                            <span class="year">{{exp.ano}}</span>
+                                <span class="month">{{exp.tiempo}}</span>
+                                <span class="year">{{exp.ano}}</span>
                             </span>
                         </div>
                     </div>
