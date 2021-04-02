@@ -27,6 +27,34 @@ export class TimeLineComponent implements OnInit {
         puesto: 'Programador Junior',
         localidad: 'Vitoria-Gasteiz, Alava/Araba'
       },
+      {
+        tiempo: 'Presente',
+        ano: '2019',
+        compania: 'Deusto Seidor',
+        puesto: 'Programador Junior',
+        localidad: 'Vitoria-Gasteiz, Alava/Araba'
+      },
+      {
+        tiempo: 'Presente',
+        ano: '2019',
+        compania: 'Deusto Seidor',
+        puesto: 'Programador Junior',
+        localidad: 'Vitoria-Gasteiz, Alava/Araba'
+      },
+      {
+        tiempo: 'Presente',
+        ano: '2019',
+        compania: 'Deusto Seidor',
+        puesto: 'Programador Junior',
+        localidad: 'Vitoria-Gasteiz, Alava/Araba'
+      },
+      {
+        tiempo: 'Presente',
+        ano: '2019',
+        compania: 'Deusto Seidor',
+        puesto: 'Programador Junior',
+        localidad: 'Vitoria-Gasteiz, Alava/Araba'
+      },
     ];
   }
 

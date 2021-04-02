@@ -5,22 +5,24 @@
                 <button class="btn btn-timeline mb-4 mt-4" type="button">Experiencia laboral</button>
                 <button class="btn btn-timeline mb-4 mt-4" type="button">Mis estudios</button>
             </div>
-            <div class="main-timeline">
-                <div class="timeline" *ngFor="let exp of timeline">
-                    <div class="icon"></div>
-                    <div class="icon-2"></div>
-                    <div class="timeline-date">
-                        <div class="date-outer">
-                            <span class="date">
-                                <span class="year">{{exp.ano}}</span>
-                                <span class="month">{{exp.tiempo}}</span>
-                            </span>
+            <div class="scroll-timeline mb-4">
+                <div class="main-timeline">
+                    <div class="timeline" *ngFor="let exp of timeline">
+                        <div class="icon"></div>
+                        <div class="icon-2"></div>
+                        <div class="timeline-date">
+                            <div class="date-outer">
+                                <span class="date">
+                                    <span class="year">{{exp.ano}}</span>
+                                    <span class="month">{{exp.tiempo}}</span>
+                                </span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="timeline-content"> 
-                        <h5 class="timeline-title">{{exp.compania}}</h5>
-                        <h6 class="timeline-puesto">{{exp.puesto}}</h6>
-                        <p class="timeline-localidad">{{exp.localidad}}</p>
+                        <div class="timeline-content"> 
+                            <h5 class="timeline-title">{{exp.compania}}</h5>
+                            <h6 class="timeline-puesto">{{exp.puesto}}</h6>
+                            <p class="timeline-localidad">{{exp.localidad}}</p>
+                        </div>
                     </div>
                 </div>
             </div>
