@@ -2,10 +2,10 @@
     <div class="container">
         <div class="d-flex flex-column">
             <div class="d-flex flex-row justify-content-around">
-                <button class="btn btn-timeline mb-4 mt-4" type="button">Experiencia laboral</button>
-                <button class="btn btn-timeline mb-4 mt-4" type="button">Mis estudios</button>
+                <button class="btn btn-timeline mb-4 mt-4" type="button" (click)="showExperienciaLaboral()">Experiencia laboral</button>
+                <button class="btn btn-timeline mb-4 mt-4" type="button" (click)="showEstudios()">Mis estudios</button>
             </div>
-            <div class="scroll-timeline mb-4">
+            <div *ngIf="timeline" class="scroll-timeline mb-4">
                 <div class="main-timeline">
                     <div class="timeline" *ngFor="let exp of timeline">
                         <div class="icon"></div>
@@ -13,17 +13,23 @@
                         <div class="timeline-date">
                             <div class="date-outer">
                                 <span class="date">
-                                    <span class="year">{{exp.ano}}</span>
-                                    <span class="month">{{exp.tiempo}}</span>
+                                    <span class="year">{{exp.fechaIni}}</span>
+                                    <span class="month">{{exp.fechaFin}}</span>
                                 </span>
                             </div>
                         </div>
                         <div class="timeline-content"> 
-                            <h5 class="timeline-title">{{exp.compania}}</h5>
-                            <h6 class="timeline-puesto">{{exp.puesto}}</h6>
-                            <p class="timeline-localidad">{{exp.localidad}}</p>
+                            <h5 class="timeline-title">{{exp.lugar}}</h5>
+                            <h6 class="timeline-puesto">{{exp.dato}}</h6>
+                            <p class="timeline-localidad">{{exp.ciudad}}</p>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <div *ngIf="!timeline" class="d-flex justify-content-center mb-4">
+                <div class="spinner-border text-light" role="status">
+                    <span class="sr-only">Loading...</span>
                 </div>
             </div>
         </div>

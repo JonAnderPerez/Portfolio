@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { WebService } from '../../service/web.service';
+import { TimeLine } from '../../interface/time-line';
 
 @Component({
   selector: 'app-time-line',
@@ -7,12 +9,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TimeLineComponent implements OnInit {
 
-  timeline: any;
+  timeline: TimeLine;
+  private exp_lab: TimeLine;
+  private estudios: TimeLine;
 
-  constructor() { }
+  constructor(private webService: WebService) {}
 
-  ngOnInit(): void {
-    this.timeline = [
+  ngOnInit() {
+
+    this.webService.getExperienciaLaboral().subscribe(
+      data => {
+        this.timeline = data;
+        this.exp_lab = data;
+      }, err => {
+        console.log(JSON.parse(err.error).message);
+      }
+    );
+
+    this.webService.getEstudios().subscribe(
+      data => {
+        this.estudios = data;
+      }, err => {
+        console.log(JSON.parse(err.error).message);
+      }
+    );
+
+    /*this.timeline = [
       {
         tiempo: '6 Meses',
         ano: '2017',
@@ -55,7 +77,15 @@ export class TimeLineComponent implements OnInit {
         puesto: 'Programador Junior',
         localidad: 'Vitoria-Gasteiz, Alava/Araba'
       },
-    ];
+    ];*/
+  }
+
+  showExperienciaLaboral(){
+    this.timeline = this.exp_lab;
+  }
+
+  showEstudios() {
+    this.timeline = this.estudios;
   }
 
 }

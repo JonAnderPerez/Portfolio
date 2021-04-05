@@ -7,7 +7,7 @@
 
 .scroll-timeline {
     overflow: auto;
-    max-height: 500px;
+    max-height: 350px;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -120,9 +120,16 @@
 }
 
 /* RESPONSIVE */
- 
+
+/* ################ TODO ################ */
+/* Falta hacer que la linea cuadre bien en todas las resoluciones */
+
 /* Móviles en horizontal o tablets en vertical */
 @media (min-width: 768px) { 
+    .scroll-timeline {
+        max-height: 500px;
+    }
+
     .main-timeline:before {
         margin: 0 auto;
     }

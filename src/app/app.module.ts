@@ -2,9 +2,13 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 //Modulos de Bootstrap
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+//Services
+import { WebService } from './service/web.service';
 
 //Componentes de la aplicacion
 import { AppComponent } from './app.component';
@@ -23,9 +27,12 @@ import { TimeLineComponent } from './component/time-line/time-line.component';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    HttpClientModule,
     NgbModule
   ],
-  providers: [],
+  providers: [
+    WebService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
