@@ -1,0 +1,79 @@
+/* ESTILOS NORMALES (para móviles en vertical) */
+
+.inicio-background {
+    height: 100vh;
+}
+
+.inicio-text {
+    font-size: 2.3em;
+    font-weight: 700;
+    text-align: center;
+}
+
+.img-inicio {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+    object-position: 50%;
+}
+
+.contenedor-texto-inicio {
+    width: fit-content;
+    position: relative;
+    left: 0;
+    top: 40%;
+}
+
+.contenedor-boton-inicio {
+    position: relative;
+}
+
+.txt-c-w {
+    color: white;
+}
+
+/* RESPONSIVE */
+
+/* Móviles en horizontal o tablets en vertical */
+@media (min-width: 768px) { 
+    .inicio-text {
+        font-size: 3em;
+        text-align: left;
+    }
+
+    .img-inicio {
+        height: 80vh;
+        width: unset;
+        object-fit: unset;
+        object-position: unset;
+    }
+
+    .contenedor-texto-inicio {
+        left: 5%;
+    }
+}
+ 
+/* Tablets en horizonal y escritorios normales */
+@media (min-width: 1024px) { 
+    .inicio-text {
+        font-size: 3.2em;
+    }
+
+    .img-inicio {
+        height: 90vh;
+    }
+}
+ 
+/* Escritorios muy anchos */
+@media (min-width: 1200px) {
+    .inicio-text {
+        font-size: 3.5em;
+    }
+
+    .img-inicio {
+        height: 95vh;
+    }
+}

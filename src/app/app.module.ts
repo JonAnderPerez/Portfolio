@@ -15,13 +15,15 @@ import { AppComponent } from './app.component';
 import { TopbarComponent } from './component/topbar/topbar.component';
 import { SobreMiComponent } from './component/sobre-mi/sobre-mi.component';
 import { TimeLineComponent } from './component/time-line/time-line.component';
+import { InicioComponent } from './component/inicio/inicio.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopbarComponent,
     SobreMiComponent,
-    TimeLineComponent
+    TimeLineComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,

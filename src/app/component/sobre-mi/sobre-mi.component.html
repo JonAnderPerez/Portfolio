@@ -1,24 +1,31 @@
-<div class="jumbotron jumbotron-fluid bg-grey">
-    <div class="container">
-        <!-- Probar a hacerlo con media -->
-        <div class="custom-card d-flex flex-row justify-content-between align-items-center bg-white rounded">
-            <div class="col-md-4 d-none d-lg-block">
-                <img class="img-fluid rounded" src="assets/img/foto.png" alt="Logo">
-            </div>
-            <div class="col-md justify-content-between">
-                <span>Hola, yo soy</span>
-                <h2>{{datosPersonales.nombre}}</h2>
-                <h5>{{datosPersonales.categoria}}</h5>
-                <p>{{datosPersonales.descripcion}}</p>
-                <div class="row justify-content-start" *ngFor="let dato of datosPersonales.datos">
-                    <h6 class="col-sm-3">{{dato.label}}</h6>
-                    <span class="col-sm">{{dato.dato}}</span>
-                </div>
-                <div class="row">
-                    <h6 class="col-sm">Redes sociales: </h6>
-                    <span class="col-sm">{{datosPersonales.nombre}}</span>
+<section class="jumbotron jumbotron-fluid mb-0 bg-grey">
+    <div class="container custom-card">
+        <div class="banner_inner d-flex align-items-center">
+            <div class="banner-content">
+                <div class="media">
+                    <div class="d-flex">
+                        <img src="assets/img/personal.jpg" alt="Logo">
+                    </div>
+                    <div class="media-body">
+                        <div class="personal_text">
+                            <h6>Hola a todos, yo soy</h6>
+                            <h3>{{datosPersonales.nombre}}</h3>
+                            <h4>{{datosPersonales.categoria}}</h4>
+                            <p>{{datosPersonales.descripcion}}</p>
+                            <ul class="list basic_info">
+                                <li *ngFor="let dato of datosPersonales.datos">
+                                    <span><i class="{{dato.icon}}"></i>{{dato.dato}}</span>
+                                </li>
+                            </ul>
+                            <ul class="list personal_social">
+                                <li *ngFor="let rs of datosPersonales.redSoc">
+                                    <a href="{{rs.url}}" target="blank"><i class="{{rs.icon}}"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
