@@ -16,6 +16,8 @@ import { TopbarComponent } from './component/topbar/topbar.component';
 import { SobreMiComponent } from './component/sobre-mi/sobre-mi.component';
 import { TimeLineComponent } from './component/time-line/time-line.component';
 import { InicioComponent } from './component/inicio/inicio.component';
+import { ResumenComponent } from './component/resumen/resumen.component';
+import { SkillsComponent } from './component/resumen/skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { InicioComponent } from './component/inicio/inicio.component';
     TopbarComponent,
     SobreMiComponent,
     TimeLineComponent,
-    InicioComponent
+    InicioComponent,
+    ResumenComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,

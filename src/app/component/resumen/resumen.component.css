@@ -1,0 +1,27 @@
+/* ESTILOS NORMALES (para móviles en vertical) */
+
+.resumen-background {
+    background-color: #D0D0D0;
+    height: 100vh;
+}
+
+/* RESPONSIVE */
+/* Moviles un poco mas anchos */
+@media (min-width: 576px) {
+
+}
+
+/* Móviles en horizontal o tablets en vertical */
+@media (min-width: 768px) {
+
+}
+
+/* Tablets en horizonal y escritorios normales */
+@media (min-width: 1024px) { 
+
+}
+ 
+/* Escritorios muy anchos */
+@media (min-width: 1200px) {
+    
+}
