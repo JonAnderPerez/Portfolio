@@ -10,6 +10,7 @@ import { TimeLine } from '../../interface/time-line';
 export class TimeLineComponent implements OnInit {
 
   timeline: TimeLine;
+  experiencia: boolean = true;
   private exp_lab: TimeLine;
   private estudios: TimeLine;
 
@@ -33,59 +34,16 @@ export class TimeLineComponent implements OnInit {
         console.log(JSON.parse(err.error).message);
       }
     );
-
-    /*this.timeline = [
-      {
-        tiempo: '6 Meses',
-        ano: '2017',
-        compania: 'Jorge Fernandez Ceramicas',
-        puesto: 'Mantenimiento y ayudante de logistica',
-        localidad: 'Vitoria-Gasteiz, Alava/Araba'
-      },
-      {
-        tiempo: 'Presente',
-        ano: '2019',
-        compania: 'Deusto Seidor',
-        puesto: 'Programador Junior',
-        localidad: 'Vitoria-Gasteiz, Alava/Araba'
-      },
-      {
-        tiempo: 'Presente',
-        ano: '2019',
-        compania: 'Deusto Seidor',
-        puesto: 'Programador Junior',
-        localidad: 'Vitoria-Gasteiz, Alava/Araba'
-      },
-      {
-        tiempo: 'Presente',
-        ano: '2019',
-        compania: 'Deusto Seidor',
-        puesto: 'Programador Junior',
-        localidad: 'Vitoria-Gasteiz, Alava/Araba'
-      },
-      {
-        tiempo: 'Presente',
-        ano: '2019',
-        compania: 'Deusto Seidor',
-        puesto: 'Programador Junior',
-        localidad: 'Vitoria-Gasteiz, Alava/Araba'
-      },
-      {
-        tiempo: 'Presente',
-        ano: '2019',
-        compania: 'Deusto Seidor',
-        puesto: 'Programador Junior',
-        localidad: 'Vitoria-Gasteiz, Alava/Araba'
-      },
-    ];*/
   }
 
   showExperienciaLaboral(){
     this.timeline = this.exp_lab;
+    this.experiencia = true;
   }
 
   showEstudios() {
     this.timeline = this.estudios;
+    this.experiencia = false;
   }
 
 }

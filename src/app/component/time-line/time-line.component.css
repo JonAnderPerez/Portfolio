@@ -1,8 +1,29 @@
 /* ESTILOS NORMALES (para móviles en vertical) */
 
+.nav.nav-tabs {
+    display: block;
+    text-align: center;
+    border: none;
+}
+
+.nav.nav-tabs li {
+    display: inline-block;
+    margin-right: 8px; 
+}
+
 .btn-timeline {
     background-color: rgba(255, 255, 255, 0.5);
     color: #fff;
+    margin: 0px;
+    line-height: 50px;
+    border-radius: 5px;
+    padding: 0px 40px;
+    font-weight: 500;
+}
+
+.btn-timeline.active {
+    background-color: #fff;
+    color: #212121;
 }
 
 .scroll-timeline {
@@ -39,7 +60,6 @@
 }
 
 .main-timeline .timeline {
-    margin-bottom: 40px;
     position: relative;
 }
 
@@ -50,7 +70,7 @@
 }
 
 .main-timeline .icon,
-.main-timeline .icon-2 {
+.main-timeline .icon:after {
     margin: auto 0;
     position: absolute;
     border-radius: 50%;
@@ -67,11 +87,12 @@
     background-color: rgba(255, 255, 255, 0.5);
 }
 
-.main-timeline .icon-2 {
+.main-timeline .icon:after {
+    content: "";
     width: 18px;
     height: 18px;
     line-height: 18px;
-    margin-left: 6px;
+    margin: auto;
     background-color: #fff;
 }
 
@@ -121,11 +142,13 @@
 
 /* RESPONSIVE */
 
-/* ################ TODO ################ */
-/* Falta hacer que la linea cuadre bien en todas las resoluciones */
-
 /* Móviles en horizontal o tablets en vertical */
 @media (min-width: 768px) { 
+
+    .nav.nav-tabs li {
+        margin-right: 25px; 
+    }
+
     .scroll-timeline {
         max-height: 500px;
     }
@@ -134,13 +157,8 @@
         margin: 0 auto;
     }
 
-    .main-timeline .icon,
-    .main-timeline .icon-2 {
-        margin: auto;
-    }
-
-    .main-timeline .icon-2 {
-        margin-left: none;
+    .main-timeline .icon {
+        margin: 54px auto;
     }
 
     .main-timeline .timeline-date {
@@ -201,6 +219,13 @@
     .main-timeline .timeline:nth-child(2n) .timeline-content {
         padding: 20px 50px 20px 0;
         text-align: right
+    }
+}
+
+/* Ajustes de linea */
+@media (min-width: 992px) {
+    .main-timeline .timeline-date:before {
+        width: 37%;
     }
 }
  

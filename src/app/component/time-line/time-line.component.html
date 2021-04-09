@@ -1,15 +1,15 @@
 <div class="bg-accent">
     <div class="container">
         <div class="d-flex flex-column">
-            <div class="d-flex flex-row justify-content-around">
-                <button class="btn btn-timeline mb-4 mt-4" type="button" (click)="showExperienciaLaboral()">Experiencia laboral</button>
-                <button class="btn btn-timeline mb-4 mt-4" type="button" (click)="showEstudios()">Mis estudios</button>
-            </div>
+            <ul class="nav nav-tabs mb-4 mt-4">
+                <li class="nav-item"><button class="btn btn-timeline" [ngClass]="{'active': experiencia}" type="button" (click)="showExperienciaLaboral()">Experiencia</button></li>
+                <li class="nav-item"><button class="btn btn-timeline" [ngClass]="{'active': !experiencia}" type="button" (click)="showEstudios()">Estudios</button></li>
+            </ul>
             <div *ngIf="timeline" class="scroll-timeline mb-4">
                 <div class="main-timeline">
                     <div class="timeline" *ngFor="let exp of timeline">
                         <div class="icon"></div>
-                        <div class="icon-2"></div>
+                        <!--<div class="icon-2"></div>-->
                         <div class="timeline-date">
                             <div class="date-outer">
                                 <span class="date">
