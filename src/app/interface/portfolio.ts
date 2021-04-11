@@ -5,19 +5,11 @@ import { Certificacion } from './certificacion';
 import { Servicio } from './servicio';
 import { Proyectos } from './proyectos';
 import { Testimonio } from './testimonio';
+import { DatosPersonales } from './datos-personales';
 
 export interface Portfolio {
-    nombre?:             string;
-    fechaNacimiento?:    string;
-    localidad?:          string;
-    codigoPostal?:       string;
-    email?:              string;
-    telefonoMovil?:      string;
-    titulo?:             string;
-    presentacion?:       string;
-    descripcionCorta?:   string;
     urlCurriculum?:      string;
-    redSocial?:          RedSocial[];
+    datosPersonales?:    DatosPersonales[];
     experienciaLaboral?: TimeLine[];
     estudios?:           TimeLine[];
     skills?:             Skill[];

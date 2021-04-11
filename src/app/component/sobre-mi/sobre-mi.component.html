@@ -6,20 +6,20 @@
                     <div class="d-flex">
                         <img src="assets/img/personal.jpg" alt="Logo">
                     </div>
-                    <div class="media-body">
+                    <div *ngIf="datosPersonales" class="media-body">
                         <div class="personal_text">
                             <h6>Hola a todos, yo soy</h6>
-                            <h3>{{datosPersonales.nombre}}</h3>
-                            <h4>{{datosPersonales.categoria}}</h4>
-                            <p>{{datosPersonales.descripcion}}</p>
+                            <h3>Jon Ander Pérez</h3>
+                            <h4>{{datosPersonales.titulo}}</h4>
+                            <p>{{datosPersonales.descripcionCorta}}</p>
                             <ul class="list basic_info">
                                 <li *ngFor="let dato of datosPersonales.datos">
                                     <span><i class="{{dato.icon}}"></i>{{dato.dato}}</span>
                                 </li>
                             </ul>
                             <ul class="list personal_social">
-                                <li *ngFor="let rs of datosPersonales.redSoc">
-                                    <a href="{{rs.url}}" target="blank"><i class="{{rs.icon}}"></i></a>
+                                <li *ngFor="let rs of datosPersonales.redSocial">
+                                    <a href="{{rs.urlRedSocial}}" target="blank"><i class="{{rs.icon}}"></i></a>
                                 </li>
                             </ul>
                         </div>

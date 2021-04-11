@@ -11,12 +11,17 @@ export class WebService {
   private URL = 'https://jonanderperez-e8b20-default-rtdb.europe-west1.firebasedatabase.app';
   private JSON = '.json';
   private PORTFOLIO = '/portfolio';
+  private DATOS_PERSONALES = '/datos_personales';
   private EXP_LAB = '/experiencia_laboral';
   private ESTUDIOS = '/estudios';
 
   private datosJSON: Portfolio;
 
   constructor(private http: HttpClient){}
+
+  public getDatosPersonales(): Observable<any> {
+    return this.http.get(this.URL + this.PORTFOLIO + this.DATOS_PERSONALES + this.JSON);
+  }
 
   public getExperienciaLaboral(): Observable<any> {
     return this.http.get(this.URL + this.PORTFOLIO + this.EXP_LAB + this.JSON);

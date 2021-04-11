@@ -1,4 +1,4 @@
 export interface RedSocial {
-    nombreRedSocial?: string;
-    urlRedSocial?:    string;
+    icon?:              string;
+    urlRedSocial?:      string;
 }

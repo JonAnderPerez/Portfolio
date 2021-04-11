@@ -17,7 +17,6 @@ export class TimeLineComponent implements OnInit {
   constructor(private webService: WebService) {}
 
   ngOnInit() {
-
     this.webService.getExperienciaLaboral().subscribe(
       data => {
         this.timeline = data;
