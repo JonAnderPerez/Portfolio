@@ -2,8 +2,35 @@
 
 .resumen-background {
     background-color: #D0D0D0;
-    height: 100vh;
+    height: 95vh;
 }
+
+.scroll-list-group {
+    
+}
+
+.scroll-item:hover:before {
+    content: '';
+    background-color: #0092ca;
+    height: 3px;
+    width: 25px;
+    display: block;
+    position: absolute;
+    left: 60px;
+    top: 50%;
+}
+
+.scroll-link {
+    color: #212121;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.scroll-link:hover {
+    color: #0092ca;
+    padding-left: 50px;
+}
+
 
 /* RESPONSIVE */
 /* Moviles un poco mas anchos */
