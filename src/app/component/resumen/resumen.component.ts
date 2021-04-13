@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResumenComponent implements OnInit {
 
+  currentSection = 'skills';
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  scrollTo(section) {
+    document.querySelector('#' + section).scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+  }
+
+  onSectionChange(section:string) {
+    this.currentSection = section;
   }
 
 }

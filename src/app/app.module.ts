@@ -18,6 +18,10 @@ import { TimeLineComponent } from './component/time-line/time-line.component';
 import { InicioComponent } from './component/inicio/inicio.component';
 import { ResumenComponent } from './component/resumen/resumen.component';
 import { SkillsComponent } from './component/resumen/skills/skills.component';
+import { CursosComponent } from './component/resumen/cursos/cursos.component';
+import { CertificacionesComponent } from './component/resumen/certificaciones/certificaciones.component';
+import { ServiciosComponent } from './component/resumen/servicios/servicios.component';
+import { ScrollSpyDirective } from './directive/scroll-spy.directive';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,11 @@ import { SkillsComponent } from './component/resumen/skills/skills.component';
     TimeLineComponent,
     InicioComponent,
     ResumenComponent,
-    SkillsComponent
+    SkillsComponent,
+    CursosComponent,
+    CertificacionesComponent,
+    ServiciosComponent,
+    ScrollSpyDirective
   ],
   imports: [
     BrowserModule,

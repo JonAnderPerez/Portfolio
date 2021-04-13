@@ -1,16 +1,25 @@
 <section class="resumen-background p-5 pt-5">
-    <ul class="nav flex-column scroll-list-group">
-        <li class="scroll-item">
-            <a class="nav-link scroll-link" href="#skills">Skills</a>
-        </li>
-        <li class="scroll-item">
-            <a class="nav-link scroll-link" href="#cursos">Cursos</a>
-        </li>
-        <li class="scroll-item">
-            <a class="nav-link scroll-link" href="#certificaciones">Certificaciones</a>
-        </li>
-        <li class="scroll-item">
-            <a class="nav-link scroll-link" href="#servicios">Servicios</a>
-        </li>
-    </ul>
+    <div class="container d-flex flex-row justify-content-around box_1620">
+        <ul id="resumen-list" class="nav scroll-list-group align-self-start">
+            <li class="scroll-item">
+                <a class="nav-link scroll-link" [ngClass]="{'active': currentSection === 'skills'}" (click)="scrollTo('skills')">Skills</a>
+            </li>
+            <li class="scroll-item">
+                <a class="nav-link scroll-link" [ngClass]="{'active': currentSection === 'cursos'}" (click)="scrollTo('cursos')">Cursos</a>
+            </li>
+            <li class="scroll-item">
+                <a class="nav-link scroll-link" [ngClass]="{'active': currentSection === 'certificaciones'}" (click)="scrollTo('certificaciones')">Certificaciones</a>
+            </li>
+            <li class="scroll-item">
+                <a class="nav-link scroll-link" [ngClass]="{'active': currentSection === 'servicios'}" (click)="scrollTo('servicios')">Servicios</a>
+            </li>
+        </ul>
+    
+        <div class="resumen-data" scrollSpy [spiedTag]="['DIV']" (sectionChange)="onSectionChange($event)">
+            <div id="skills"><app-skills></app-skills></div>
+            <div id="cursos"><app-cursos></app-cursos></div>
+            <div id="certificaciones"><app-certificaciones></app-certificaciones></div>
+            <div id="servicios"><app-servicios></app-servicios></div>
+        </div>
+    </div>
 </section>
