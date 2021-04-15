@@ -1,0 +1,18 @@
+<div class="mb-4">
+    <div class="custom-card p-5">
+        <h2 class="progress-title mb-4">{{skill.nombre}}</h2>
+        <div class="progress mx-auto">
+            <span class="progress-left">
+                <span id="progress-bar-left" class="progress-bar border-primary bg-accent"
+                [ngStyle]="{'transform': skill.porcentaje > 50 ? 'rotate(' + grados + 'deg)' : 0}"></span>
+            </span>
+            <span class="progress-right">
+                <span id="progress-bar-right" class="progress-bar border-primary bg-accent" 
+                [ngStyle]="{'transform': skill.porcentaje <= 50 ? 'rotate(' + grados + 'deg)' : 'rotate(180deg)'}"></span>
+            </span>
+            <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                <span class="h2"><span class="font-weight-bold">{{skill.porcentaje}}</span>%</span>
+            </div>
+        </div>
+    </div>
+</div>

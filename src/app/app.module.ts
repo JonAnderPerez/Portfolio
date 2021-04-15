@@ -22,6 +22,8 @@ import { CursosComponent } from './component/resumen/cursos/cursos.component';
 import { CertificacionesComponent } from './component/resumen/certificaciones/certificaciones.component';
 import { ServiciosComponent } from './component/resumen/servicios/servicios.component';
 import { ScrollSpyDirective } from './directive/scroll-spy.directive';
+import { SkillsCardComponent } from './component/resumen/skills/skills-card/skills-card.component';
+import { SkillsBarComponent } from './component/resumen/skills/skills-bar/skills-bar.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { ScrollSpyDirective } from './directive/scroll-spy.directive';
     CursosComponent,
     CertificacionesComponent,
     ServiciosComponent,
-    ScrollSpyDirective
+    ScrollSpyDirective,
+    SkillsCardComponent,
+    SkillsBarComponent
   ],
   imports: [
     BrowserModule,

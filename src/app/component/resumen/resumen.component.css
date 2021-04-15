@@ -2,47 +2,16 @@
 
 .resumen-background {
     background-color: #D0D0D0;
-    max-height: 95vh;
-    height: 100%;
-    width: 100%;
 }
 
 .scroll-list-group {
-    width: 20%;
-    position: relative;
-    left: 0;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.resumen-data {
-    overflow: auto;
-    max-height: 80vh;
-    width: 80%;
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-.resumen-data::-webkit-scrollbar {
     display: none;
 }
-  
-/* Hide scrollbar for IE, Edge and Firefox */
-.resumen-data {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-}
 
-/*.scroll-item:hover:before {
-    content: '';
-    background-color: #0092ca;
-    height: 3px;
-    width: 25px;
-    display: block;
-    position: absolute;
-    left: 60px;
-    top: 50%;
-}*/
+.resumen-data {
+    height: 100%;
+    width: 100%;
+}
 
 .scroll-link {
     color: #212121;
@@ -52,20 +21,17 @@
 
 .scroll-link:hover {
     color: #0092ca;
-    padding-left: 50px;
-    cursor: pointer;
 }
 
 .scroll-link.active {
     color: #0092ca;
-    padding-left: 50px;
 }
 
 
 /* RESPONSIVE */
 /* Moviles un poco mas anchos */
 @media (min-width: 576px) {
-
+    
 }
 
 /* Móviles en horizontal o tablets en vertical */
@@ -75,11 +41,52 @@
 
 /* Tablets en horizonal y escritorios normales */
 @media (min-width: 1024px) { 
-
+    
 }
  
 /* Escritorios muy anchos */
 @media (min-width: 1200px) {
+
+    .container {
+        max-width: 1170px;
+    }
+
+    .resumen-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .scroll-list-group {
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .resumen-data {
+        overflow: auto;
+        max-height: 80vh; /* TODO Calcular este dato junto al nabvar */
+        width: 80%;
+    }
+    
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .resumen-data::-webkit-scrollbar {
+        display: none;
+    }
+      
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .resumen-data {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+    
+    .scroll-link:hover {
+        padding-left: 50px;
+    }
+    
+    .scroll-link.active {
+        padding-left: 50px;
+    }
 
 }
 

@@ -1,3 +1,30 @@
-<section style="height: 500px; background-color: blueviolet;">
+<section>
+    <h2 class="d-block">Skills</h2>
+    <!--No visible en movil-->
+    <div *ngIf="primarySkills" class="d-none d-md-flex flex-row justify-content-between">
+        <div *ngFor="let skill of primarySkills">
+            <app-skills-card [skill]="skill"></app-skills-card>
+        </div>
+    </div>
+    <div class="progress-bar-container">
 
+        <!--Visible solo en movil-->
+        <div *ngIf="primarySkills" class="d-block d-md-none w-45">
+            <div *ngFor="let skill of primarySkills">
+                <app-skills-bar [skill]="skill"></app-skills-bar>
+            </div>
+        </div>
+
+        <!--Visible siempre-->
+        <div *ngIf="secondarySkills1" class="w-45">
+            <div *ngFor="let skill of secondarySkills1">
+                <app-skills-bar [skill]="skill"></app-skills-bar>
+            </div>
+        </div>
+        <div *ngIf="secondarySkills2" class="w-45">
+            <div *ngFor="let skill of secondarySkills2">
+                <app-skills-bar [skill]="skill"></app-skills-bar>
+            </div>
+        </div>
+    </div>
 </section>

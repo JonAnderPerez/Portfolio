@@ -1,16 +1,16 @@
-<section class="resumen-background p-5 pt-5">
-    <div class="container d-flex flex-row justify-content-around box_1620">
+<section class="resumen-background pb-2 pt-2 pb-md-3 pt-md-3 pb-xl-5 pt-xl-5">
+    <div class="container resumen-container box_1620">
         <ul id="resumen-list" class="nav scroll-list-group align-self-start">
-            <li class="scroll-item">
+            <li>
                 <a class="nav-link scroll-link" [ngClass]="{'active': currentSection === 'skills'}" (click)="scrollTo('skills')">Skills</a>
             </li>
-            <li class="scroll-item">
+            <li>
                 <a class="nav-link scroll-link" [ngClass]="{'active': currentSection === 'cursos'}" (click)="scrollTo('cursos')">Cursos</a>
             </li>
-            <li class="scroll-item">
+            <li>
                 <a class="nav-link scroll-link" [ngClass]="{'active': currentSection === 'certificaciones'}" (click)="scrollTo('certificaciones')">Certificaciones</a>
             </li>
-            <li class="scroll-item">
+            <li>
                 <a class="nav-link scroll-link" [ngClass]="{'active': currentSection === 'servicios'}" (click)="scrollTo('servicios')">Servicios</a>
             </li>
         </ul>

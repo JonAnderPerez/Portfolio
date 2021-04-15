@@ -1,0 +1,40 @@
+/* ESTILOS NORMALES (para móviles en vertical) */
+
+h2 {
+    font-size: 48px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+
+.progress-bar-container {
+    display: block;
+}
+
+/* RESPONSIVE */
+/* Moviles un poco mas anchos */
+@media (min-width: 576px) {
+
+}
+
+/* Móviles en horizontal o tablets en vertical */
+@media (min-width: 768px) {
+    .progress-bar-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .w-45 {
+        width: 45%;
+    }
+}
+
+/* Tablets en horizonal y escritorios normales */
+@media (min-width: 1024px) { 
+
+}
+ 
+/* Escritorios muy anchos */
+@media (min-width: 1200px) {
+    
+}

@@ -1,0 +1,7 @@
+<h3 class="progress-title">{{skill.nombre}}</h3>
+<div class="progress-outer">
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-accent" [ngStyle]="{'width': skill.porcentaje + '%'}"></div>
+        <div class="progress-value"><span>{{skill.porcentaje}}</span>%</div>
+    </div>
+</div>
