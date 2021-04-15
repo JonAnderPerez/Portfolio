@@ -15,6 +15,8 @@ export class WebService {
   private EXP_LAB = '/experiencia_laboral';
   private ESTUDIOS = '/estudios';
   private SKILLS = '/skills';
+  private CURSOS = '/cursos';
+  private CERTIFICACIONES = '/certificacion';
 
   private datosJSON: Portfolio;
 
@@ -34,6 +36,14 @@ export class WebService {
 
   public getSkills(): Observable<any> {
     return this.http.get(this.URL + this.PORTFOLIO + this.SKILLS + this.JSON);
+  }
+
+  public getCursos(): Observable<any> {
+    return this.http.get(this.URL + this.PORTFOLIO + this.CURSOS + this.JSON);
+  }
+
+  public getCertificaciones(): Observable<any> {
+    return this.http.get(this.URL + this.PORTFOLIO + this.CERTIFICACIONES + this.JSON);
   }
 
 }

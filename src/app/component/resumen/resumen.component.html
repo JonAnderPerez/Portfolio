@@ -10,16 +10,16 @@
             <li>
                 <a class="nav-link scroll-link" [ngClass]="{'active': currentSection === 'certificaciones'}" (click)="scrollTo('certificaciones')">Certificaciones</a>
             </li>
-            <li>
+            <!--<li>
                 <a class="nav-link scroll-link" [ngClass]="{'active': currentSection === 'servicios'}" (click)="scrollTo('servicios')">Servicios</a>
-            </li>
+            </li>-->
         </ul>
     
         <div class="resumen-data" scrollSpy [spiedTag]="['DIV']" (sectionChange)="onSectionChange($event)">
             <div id="skills"><app-skills></app-skills></div>
             <div id="cursos"><app-cursos></app-cursos></div>
             <div id="certificaciones"><app-certificaciones></app-certificaciones></div>
-            <div id="servicios"><app-servicios></app-servicios></div>
+            <!--<div id="servicios"><app-servicios></app-servicios></div>-->
         </div>
     </div>
 </section>

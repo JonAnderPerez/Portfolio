@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Certificacion } from 'src/app/interface/certificacion';
+import { WebService } from 'src/app/service/web.service';
 
 @Component({
   selector: 'app-cursos',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CursosComponent implements OnInit {
 
-  constructor() { }
+  cursos: Certificacion;
+
+  constructor(private webService: WebService) { }
 
   ngOnInit(): void {
+    this.webService.getCursos().subscribe(
+      data => {
+        this.cursos = data;
+      }, err => {
+        console.log(JSON.parse(err.error).message);
+      }
+    );
   }
 
 }

@@ -1,3 +1,18 @@
-<section style="height: 500px; background-color: green;">
+<section class="mb-5">
+    <h2 class="d-block">Certificaciones</h2>
 
+    <div *ngIf="certificaciones">
+        <div *ngFor="let certificacion of certificaciones">
+            <div class="media mt-2">
+                <img *ngIf="certificacion.terminado" class="d-none d-md-inline align-self-start mr-5 mt-2" src="/assets/icon/completed.png" alt="Completado">
+                <div class="media-body">
+                    <span class="anio">{{certificacion.anio}}</span>
+                    <h3>{{certificacion.nombre}}</h3>
+                    <h4>{{certificacion.plataforma}}</h4>
+                    <p>{{certificacion.descripcion}}</p>
+                </div>
+            </div>
+            <div class="divider mt-2"></div>
+        </div>
+    </div>
 </section>

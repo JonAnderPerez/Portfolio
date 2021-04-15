@@ -3,6 +3,5 @@ export interface Certificacion {
     plataforma?:      string;
     anio?:            string;
     terminado?:       boolean;
-    descripcionCERT?: string;
     descripcion?:     string;
 }
