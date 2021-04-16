@@ -24,6 +24,7 @@ import { ServiciosComponent } from './component/resumen/servicios/servicios.comp
 import { ScrollSpyDirective } from './directive/scroll-spy.directive';
 import { SkillsCardComponent } from './component/resumen/skills/skills-card/skills-card.component';
 import { SkillsBarComponent } from './component/resumen/skills/skills-bar/skills-bar.component';
+import { ProyectosComponent } from './component/proyectos/proyectos.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { SkillsBarComponent } from './component/resumen/skills/skills-bar/skills
     ServiciosComponent,
     ScrollSpyDirective,
     SkillsCardComponent,
-    SkillsBarComponent
+    SkillsBarComponent,
+    ProyectosComponent
   ],
   imports: [
     BrowserModule,
