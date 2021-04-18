@@ -25,6 +25,7 @@ import { ScrollSpyDirective } from './directive/scroll-spy.directive';
 import { SkillsCardComponent } from './component/resumen/skills/skills-card/skills-card.component';
 import { SkillsBarComponent } from './component/resumen/skills/skills-bar/skills-bar.component';
 import { ProyectosComponent } from './component/proyectos/proyectos.component';
+import { ProyectoComponent } from './component/proyectos/proyecto/proyecto.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { ProyectosComponent } from './component/proyectos/proyectos.component';
     ScrollSpyDirective,
     SkillsCardComponent,
     SkillsBarComponent,
-    ProyectosComponent
+    ProyectosComponent,
+    ProyectoComponent
   ],
   imports: [
     BrowserModule,

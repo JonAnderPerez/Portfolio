@@ -1,0 +1,25 @@
+.proyecto-background {
+    background-color: #D0D0D0;
+}
+
+h2 {
+    font-size: 48px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.link-proyectos {
+    color: #212121;
+    font-size: 1.5em;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.link-proyectos:hover {
+    color: #0092ca;
+}
+
+.link-proyectos.active {
+    color: #0092ca;
+}
