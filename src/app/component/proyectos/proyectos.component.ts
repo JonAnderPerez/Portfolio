@@ -13,7 +13,9 @@ export class ProyectosComponent implements OnInit {
   proyectos: Proyectos[];
   proyectosCards: Proyecto[];
 
-  constructor(private webService: WebService) { }
+  constructor(private webService: WebService) {
+    this.proyectosCards = [];
+  }
 
   ngOnInit(): void {
     this.webService.getProyectos().subscribe(
@@ -27,7 +29,9 @@ export class ProyectosComponent implements OnInit {
   }
 
   mostrarTodosLosProyectos(){
-    this.proyectosCards.pop();
+    if(this.proyectosCards){
+      this.proyectosCards = [];
+    }
     this.proyectos.forEach(data => {
       data.proyecto.forEach(proyecto => {
         this.proyectosCards.push(proyecto);
@@ -36,7 +40,9 @@ export class ProyectosComponent implements OnInit {
   }
 
   mostrarProyectos(proyecto: Proyectos){
-    this.proyectosCards.pop();
+    if(this.proyectosCards){
+      this.proyectosCards = [];
+    }
     proyecto.proyecto.forEach(proyecto => {
       this.proyectosCards.push(proyecto);
     });

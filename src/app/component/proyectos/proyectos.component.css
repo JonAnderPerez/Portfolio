@@ -1,3 +1,4 @@
+/* ESTILOS NORMALES (para móviles en vertical) */
 .proyecto-background {
     background-color: #D0D0D0;
 }
@@ -22,4 +23,75 @@ h2 {
 
 .link-proyectos.active {
     color: #0092ca;
+}
+
+.container-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* RESPONSIVE */
+/* Moviles un poco mas anchos */
+@media (min-width: 576px) {
+    
+}
+
+/* Móviles en horizontal o tablets en vertical */
+@media (min-width: 768px) {
+
+}
+
+/* Tablets en horizonal y escritorios normales */
+@media (min-width: 1024px) { 
+    
+}
+ 
+/* Escritorios muy anchos */
+@media (min-width: 1200px) {
+
+    .container {
+        max-width: 1170px;
+    }
+
+    .proyecto-background {
+        background-color: #D0D0D0;
+    }
+    
+    h2 {
+        font-size: 48px;
+        text-transform: capitalize;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    
+    .link-proyectos {
+        color: #212121;
+        font-size: 1.5em;
+        font-weight: 400;
+        cursor: pointer;
+    }
+    
+    .link-proyectos:hover {
+        color: #0092ca;
+    }
+    
+    .link-proyectos.active {
+        color: #0092ca;
+    }
+    
+    .container-flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+}
+
+@media (min-width: 1620px) {
+    .box_1620 {
+        max-width: 1620px;
+        margin: auto;
+        width: 100%; 
+    } 
 }

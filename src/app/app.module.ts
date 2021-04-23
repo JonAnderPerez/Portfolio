@@ -7,6 +7,9 @@ import { HttpClientModule } from '@angular/common/http';
 //Modulos de Bootstrap
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+//Modulo Owl carrousel
+import { CarouselModule } from 'ngx-owl-carousel-o';
+
 //Services
 import { WebService } from './service/web.service';
 
@@ -26,6 +29,7 @@ import { SkillsCardComponent } from './component/resumen/skills/skills-card/skil
 import { SkillsBarComponent } from './component/resumen/skills/skills-bar/skills-bar.component';
 import { ProyectosComponent } from './component/proyectos/proyectos.component';
 import { ProyectoComponent } from './component/proyectos/proyecto/proyecto.component';
+import { TestimoniosComponent } from './component/testimonios/testimonios.component';
 
 @NgModule({
   declarations: [
@@ -43,14 +47,16 @@ import { ProyectoComponent } from './component/proyectos/proyecto/proyecto.compo
     SkillsCardComponent,
     SkillsBarComponent,
     ProyectosComponent,
-    ProyectoComponent
+    ProyectoComponent,
+    TestimoniosComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    CarouselModule
   ],
   providers: [
     WebService

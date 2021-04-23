@@ -1,6 +1,7 @@
 export interface Testimonio {
-    autor?:      string;
-    testimoio?:  string;
-    cargoAutor?: string;
-    imgAutor?:   string;
+    id?:            string;
+    autor?:         string;
+    testimonio?:    string;
+    cargoAutor?:    string;
+    imgAutor?:      string;
 }

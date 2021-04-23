@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Proyecto } from 'src/app/interface/proyecto';
 
 @Component({
   selector: 'app-proyecto',
@@ -7,11 +8,16 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ProyectoComponent implements OnInit {
 
-  @Input() proyecto;
+  @Input() proyecto: Proyecto;
 
-  constructor() { }
+  appImg: string;
+
+  constructor() {
+    this.appImg = "url('assets/img/app.jpg')";
+  }
 
   ngOnInit(): void {
+    
   }
 
 }

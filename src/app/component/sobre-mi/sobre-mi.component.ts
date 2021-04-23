@@ -17,7 +17,6 @@ export class SobreMiComponent implements OnInit {
     this.webService.getDatosPersonales().subscribe(
       data => {
         this.datosPersonales = data;
-        console.log(this.datosPersonales);
       }, err => {
         console.log(JSON.parse(err.error).message);
       }

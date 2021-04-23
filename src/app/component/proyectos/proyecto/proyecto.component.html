@@ -1,1 +1,7 @@
-<p>proyecto works!</p>
+<div class="custom-card d-flex">
+    <div class="custom-card-background" [ngStyle]="{'background-image': proyecto.imgApp ? proyecto.imgApp : appImg}"></div>
+    <div class="custom-card-text align-self-end">
+        <h2>{{proyecto.nombreApp}}</h2>
+        <span>{{proyecto.tipoProyecto}}</span>
+    </div>
+</div>

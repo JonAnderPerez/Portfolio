@@ -6,7 +6,7 @@
             <a *ngFor="let proyecto of proyectos" class="nav-link link-proyectos" (click)="mostrarProyectos(proyecto)">{{proyecto.categoria}}</a>
         </nav>
     </div>
-    <div class="container">
+    <div class="container box_1620 container-flex pt-5 pb-5">
         <app-proyecto *ngFor="let proyectoCard of proyectosCards" [proyecto]="proyectoCard"></app-proyecto>
     </div>
 </section>
