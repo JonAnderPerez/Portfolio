@@ -1,0 +1,26 @@
+<section class="jumbotron jumbotron-fluid mb-0 bg-grey">
+    <h2>Contacto</h2>
+    <div class="container custom-card">
+        <form [formGroup]="formulario" (ngSubmit)="onSubmit(formulario)" novalidate>
+            <fieldset id="forms__input" class="px-sm-5">
+                <div class="datos-principales my-5">
+                    <div class="datos-input mb-5 mb-md-0 mr-md-5 ">
+                        <input formControlName="nombre" class="form-control" placeholder="Nombre">
+                    </div>
+                    <div class="datos-input">
+                        <input formControlName="email" class="form-control" placeholder="Email">
+                    </div>
+                </div>
+                <div class="datos-input mb-5">
+                    <input formControlName="asunto" class="form-control" placeholder="Asunto">
+                </div>
+                <div class="datos-textarea mb-5">
+                    <textarea formControlName="mensaje" placeholder="Mensaje"></textarea>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <button class="btn btn-contacto" type="submit" [disabled]="!formulario.valid">Enviar mensaje</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</section>

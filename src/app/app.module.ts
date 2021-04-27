@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 //Modulos de Bootstrap
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -30,6 +31,7 @@ import { SkillsBarComponent } from './component/resumen/skills/skills-bar/skills
 import { ProyectosComponent } from './component/proyectos/proyectos.component';
 import { ProyectoComponent } from './component/proyectos/proyecto/proyecto.component';
 import { TestimoniosComponent } from './component/testimonios/testimonios.component';
+import { ContactoComponent } from './component/contacto/contacto.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,8 @@ import { TestimoniosComponent } from './component/testimonios/testimonios.compon
     SkillsBarComponent,
     ProyectosComponent,
     ProyectoComponent,
-    TestimoniosComponent
+    TestimoniosComponent,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +59,9 @@ import { TestimoniosComponent } from './component/testimonios/testimonios.compon
     AppRoutingModule,
     HttpClientModule,
     NgbModule,
-    CarouselModule
+    CarouselModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     WebService
