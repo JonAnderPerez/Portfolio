@@ -18,6 +18,7 @@ export class TestimoniosComponent implements OnInit {
     center: true,
     margin: 0,
     nav: false,
+    dots: true,
     autoplay: true,
     autoplaySpeed: 1000,
     responsive: {
