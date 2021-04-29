@@ -16,11 +16,11 @@ export class TopbarComponent implements OnInit {
     this.isCollapsed = false;
 
     this.menuItem = [
-      {url: '#', name: 'Inicio'},
-      {url: '#', name: 'Sobre mi'},
-      {url: '#', name: 'Resumen'},
-      {url: '#', name: 'Proyectos'},
-      {url: '#', name: 'Contacto'}
+      {url: '#inicio', name: 'Inicio'},
+      {url: '#sobre-mi', name: 'Sobre mi'},
+      {url: '#resumen', name: 'Resumen'},
+      {url: '#proyectos', name: 'Proyectos'},
+      {url: '#contacto', name: 'Contacto'}
     ];
   }
 
