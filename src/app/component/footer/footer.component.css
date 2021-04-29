@@ -1,0 +1,115 @@
+/* ESTILOS NORMALES (para móviles en vertical) */
+.page-footer {
+    display: flex;
+    background-color: #212121;
+    justify-content: center;
+    color: white;
+}
+
+.page-footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 2em
+}
+
+.social {
+    display: none;
+    width: 300px;
+    margin-right: 100px;
+}
+
+.info {
+    width: auto;
+}
+
+.personal_social {
+    display: inline-flex;
+}
+
+.personal_social li {
+    margin-right: 7px;
+}
+
+.personal_social li a {
+    line-height: 40px;
+    width: 40px;
+    background: transparent;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+    font-size: 20px; 
+}
+
+.personal_social li:hover a {
+    background-color: #0092CA; 
+}
+
+.basic_info li {
+    margin-bottom: 15px;
+ }
+
+.basic_info li span {
+    position: relative;
+    padding-left: 40px;
+    font-size: 16px;
+    color: #777777; 
+}
+
+.basic_info li span i {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: white; 
+}
+
+/* RESPONSIVE */
+/* Moviles un poco mas anchos */
+@media (min-width: 576px) {
+    
+}
+
+/* Móviles en horizontal o tablets en vertical */
+@media (min-width: 768px) {
+    .page-footer-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 2em
+    }
+    
+    .social {
+        display: block;
+        width: 300px;
+        margin-right: 100px;
+    }
+    
+    .info {
+        width: auto;
+    }
+}
+
+/* Tablets en horizonal y escritorios normales */
+@media (min-width: 1024px) { 
+
+}
+ 
+/* Escritorios muy anchos */
+@media (min-width: 1200px) {
+    
+    .container {
+        max-width: 1170px;
+    }
+    
+}
+
+@media (min-width: 1620px) {
+    .box_1620 {
+        max-width: 1620px;
+        margin: auto;
+        width: 100%; 
+    } 
+}

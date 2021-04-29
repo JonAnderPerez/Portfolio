@@ -118,10 +118,10 @@ h2 {
     
 }
 
-@media (min-width: 1620px) {
+/*@media (min-width: 1620px) {
     .custom-card {
         max-width: 1620px;
         margin: auto;
         width: 100%; 
     } 
-}
+}*/

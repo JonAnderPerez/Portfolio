@@ -1,9 +1,21 @@
-<footer class="page-footer center" role="contentinfo">
-    <div class="page-footer-container">
-        <i class="fab fa-facebook-square"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-youtube"></i>
-        <p>Creado por: <a href="mailto:japerezg@deustosistemas.net">Jon Ander Pérez</a> Teléfono de contacto: <a href="tel:918463954">91 846 39 54</a>.</p>
-        <p>Paduleta 53, Vitoria-Gasteiz, CP: 01010</p>
+<footer class="page-footer center">
+    <div *ngIf="datosPersonales" class="container page-footer-container">
+        <div class="social">
+            <h3>Sobre mi</h3>
+            <p>{{datosPersonales.descripcionCorta}}</p>
+            <ul class="list personal_social">
+                <li *ngFor="let rs of datosPersonales.redSocial">
+                    <a href="{{rs.urlRedSocial}}" target="blank"><i class="{{rs.icon}}"></i></a>
+                </li>
+            </ul>
+        </div>
+        <div class="info">
+            <h3 class="mb-3">¿Alguna pregunta?</h3>
+            <ul class="list basic_info">
+                <li *ngFor="let dato of datosPersonales.datos">
+                    <span><i class="{{dato.icon}}"></i>{{dato.dato}}</span>
+                </li>
+            </ul>
+        </div>
     </div>
 </footer>
