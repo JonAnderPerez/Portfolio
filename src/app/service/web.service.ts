@@ -11,6 +11,7 @@ export class WebService {
   private URL = 'https://jonanderperez-e8b20-default-rtdb.europe-west1.firebasedatabase.app';
   private JSON = '.json';
   private PORTFOLIO = '/portfolio';
+  private CV = '/urlCurriculum';
   private DATOS_PERSONALES = '/datos_personales';
   private EXP_LAB = '/experiencia_laboral';
   private ESTUDIOS = '/estudios';
@@ -23,6 +24,10 @@ export class WebService {
   private datosJSON: Portfolio;
 
   constructor(private http: HttpClient){}
+
+  public getCV(): Observable<any> {
+    return this.http.get(this.URL + this.PORTFOLIO + this.CV + this.JSON);
+  }
 
   public getDatosPersonales(): Observable<any> {
     return this.http.get(this.URL + this.PORTFOLIO + this.DATOS_PERSONALES + this.JSON);
