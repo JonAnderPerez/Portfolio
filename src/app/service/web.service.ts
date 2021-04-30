@@ -21,6 +21,8 @@ export class WebService {
   private PROYECTOS = '/proyectos';
   private TESTIMONIOS = '/testimonios';
 
+  private URL_CONTACTO = 'http://localhost:5001/jonanderperez-e8b20/us-central1/sendContactFormSubmittedEmail';
+
   private datosJSON: Portfolio;
 
   constructor(private http: HttpClient){}
@@ -59,6 +61,14 @@ export class WebService {
 
   public getTestimonios(): Observable<any> {
     return this.http.get(this.URL + this.PORTFOLIO + this.TESTIMONIOS + this.JSON);
+  }
+
+  public postContactForm(form) {
+    try {
+      this.http.post(this.URL_CONTACTO, form).toPromise();
+    } catch (error) {
+      console.log(`No se pudo enviar el formulario ${error}`);
+    }
   }
 
 }
