@@ -17,7 +17,9 @@ export class ProyectoComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    
+    if(this.proyecto.imgApp !== ''){
+      this.appImg = `url('${this.proyecto.imgApp}')`;
+    }
   }
 
 }
