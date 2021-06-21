@@ -23,19 +23,16 @@
 }
 
 .inicio-text {
-    font-size: 2.3em;
+    font-size: 2em;
     font-weight: 700;
     text-align: center;
 }
 
 .img-inicio {
-    height: 100vh;
-    width: 100%;
+    width: 100vw;
     position: absolute;
     right: 0;
     bottom: 0;
-    object-fit: cover;
-    object-position: 50%;
 }
 
 .txt-c-w {
@@ -87,10 +84,7 @@
     }
 
     .img-inicio {
-        height: 80vh;
-        width: unset;
-        object-fit: unset;
-        object-position: unset;
+        width: 80vw;
     }
 
     .contenedor-boton-inicio {
@@ -118,7 +112,7 @@
     }
 
     .img-inicio {
-        height: 90vh;
+        width: 70vw;
     }
 }
  
@@ -129,6 +123,6 @@
     }
 
     .img-inicio {
-        height: 95vh;
+        width: 60vw;
     }
 }
