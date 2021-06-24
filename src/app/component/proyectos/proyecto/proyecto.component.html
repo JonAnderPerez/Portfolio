@@ -1,7 +1,9 @@
-<div class="custom-card d-flex">
-    <div class="custom-card-background" [ngStyle]="{'background-image': appImg}"></div>
-    <div class="custom-card-text align-self-end">
-        <h2>{{proyecto.nombreApp}}</h2>
-        <span>{{proyecto.tipoProyecto}}</span>
+<a href="{{proyecto.urlApp}}" target="_blank">
+    <div class="custom-card d-flex">
+        <div class="custom-card-background" [ngStyle]="{'background-image': appImg}"></div>
+        <div class="custom-card-text align-self-end">
+            <h2>{{proyecto.nombreApp}}</h2>
+            <span>{{proyecto.tipoProyecto}}</span>
+        </div>
     </div>
-</div>
+</a>
